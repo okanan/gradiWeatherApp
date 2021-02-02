@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './pages/App.jsx';
-// import reportWebVitals from './reportWebVitals';
+
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
 );

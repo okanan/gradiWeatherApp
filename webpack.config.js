@@ -13,17 +13,19 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
-    compress: true,
-    overlay: true,
-    hot: true
+    port: 9000,
+    historyApiFallback: true,
+    // compress: true,
+    // overlay: true,
+    // hot: true
   },
   resolve: {
-    extensions: ['.js','jsx','tsx'],
+    extensions: ['.js','.jsx'],
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx|tsx)$/,
+        test: /\.(js||jsx)$/,
         exclude: /node_modules/,
         use:{
           loader: 'babel-loader'
@@ -68,6 +70,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css'
     }),
+    
     // new HotModuleReplacementPlugin({})
   ],
 
