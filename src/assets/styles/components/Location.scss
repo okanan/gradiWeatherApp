@@ -1,0 +1,30 @@
+.locationContainer{
+  // background-color: green;
+  background-image: url('../../static/locationbg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 35vh;
+  height: auto;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: whitesmoke;
+
+  @media only screen and (min-width: 1200px){
+    border-radius: 30px;
+    margin: 0% 0%;
+    background-position: center;
+    background-size: cover;;
+
+  }
+
+  @media only screen and (min-width: 768px){
+    border-radius: 30px;
+    margin: 0% 0%;
+    background-position: center;
+    background-size: cover;;
+    height: 100%;
+
+  }
+
+}
+
