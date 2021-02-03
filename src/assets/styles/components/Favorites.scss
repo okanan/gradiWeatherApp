@@ -1,5 +1,40 @@
 .favoritesContainer{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
   min-height: 200px;
   height: 100%;
-  background-color: midnightblue;
+}
+
+.favoriteCard{
+  border-radius: 20px;
+  width: 90%;
+  margin: 0 auto;
+  height: 100px;
+
+}
+
+.favoriteCard#paris{
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-image: url('../../static/paris.jpg');
+  background-size: contain;
+  font-size: 0.7rem;
+}
+
+.cardBg{
+  background: linear-gradient(90deg, rgba(5,4,24,0.8500350823923319) 0%, rgba(0,0,0,0.799614914325105) 19%, rgba(242,242,242,0) 100%);
+  color: whitesmoke;
+  padding: 4%;
+  height: 100%;
+  border-radius: 20px;
+  font-family: 'Questrial', sans-serif;
+}
+
+.favoriteCard#addFavorite{
+  background-color: cadetblue;
+
 }

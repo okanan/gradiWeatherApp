@@ -11,6 +11,7 @@ class Location extends React.Component {
     data: {},
   };
 
+
   componentDidMount(){
     this.fetchData();
   }
@@ -23,15 +24,15 @@ class Location extends React.Component {
 
     try {
       const res = await fetch(URL_API);
-      const par = await res.json();
+      var par = await res.json();
       console.log(par);
+      console.log(par.main.temp);
 
       this.setState({
         loading: false,
         data: par,
       })
-
-      return par;
+      // return par;
       
     } catch (error) {
       this.setState({
@@ -43,6 +44,8 @@ class Location extends React.Component {
 
   render() {
 
+    const info = {...this.state.data.main};
+
     if(this.state.loading === true && !this.state.data){
       return 0;
     }
@@ -53,10 +56,10 @@ class Location extends React.Component {
 
     return (
       <div className="locationContainer">
-        <h1>{this.state.data.name}</h1>
-        {/* {this.state['data']['main'][0]} */}
-        {/* console.log(`${this.state.data}`); */}
-        {/* {this.state.data.main.temp} */}
+        <div className="locationInfo">
+          <h1>{this.state.data.name}</h1>
+          <h2>{info.temp}°</h2>
+        </div>
       </div>
     )
   };

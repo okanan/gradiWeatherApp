@@ -9,11 +9,34 @@
   border-bottom-right-radius: 50px;
   color: whitesmoke;
 
+  & .locationInfo{
+    // background-color: red;
+    background: linear-gradient(90deg, rgba(5,4,24,0.8500350823923319) 0%, rgba(0,0,0,0.799614914325105) 19%, rgba(242,242,242,0) 100%);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 50%;
+    font-size: 1.8rem;
+    font-family: 'Questrial', sans-serif;
+  }
+
   @media only screen and (min-width: 1200px){
     border-radius: 30px;
     margin: 0% 0%;
     background-position: center;
-    background-size: cover;;
+    background-size: cover;
+
+    & .locationInfo{
+      // background-color: red;
+      height: 100%;
+      width: 50%;
+      font-size: 2.8rem;
+      font-family: 'Questrial', sans-serif;
+
+    }
 
   }
 
@@ -23,6 +46,12 @@
     background-position: center;
     background-size: cover;;
     height: 100%;
+
+    & .locationInfo{
+      border-radius: 30px;
+      align-items: flex-start;
+      padding: 4%;
+    }
 
   }
 
