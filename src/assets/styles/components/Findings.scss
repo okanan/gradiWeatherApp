@@ -1,11 +1,106 @@
 .findingsContainer{
+  display: grid;
+  grid-template: 1.5fr 2.5fr 3.7fr / 1fr 1fr;
   min-height: 205px;
-  height: 100%;
-  background-color: lightgreen;
-  margin: 5% 0;
+  height: 95%;
+  margin: 2.5% auto;
+  font-family: 'Questrial', sans-serif;
 
-  @media only screen and (min-width: 1200px) {
+
+  & div{
+    display: flex;
+    border-radius: 15px;
+    margin: auto;
+    padding: 2%;
+    color: whitesmoke;
+    font-weight: 600;
+  }
+
+  & div#reviewers{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+    width: 90%;
+    color: rgb(113, 113, 113);
+
+    & .friends{
+      height: 100%;
+      width: auto;
+
+      & .cicrles{
+        background-color: yellowgreen;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+    }
+
+  }
+
+  & div#places{
+    background-image: url('../../static/museum.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    height: 80%;
+    width: 85%;
+    padding: 5%;
+    font-size: 0.7rem;
+  }
+  & div#other{
+    grid-row: 2 / 4;
+    background-image: url('../../static/soumaya.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 80%;
+    width: 85%;
+    padding: 0;
+    margin: auto;
+    font-size: 0.7rem;
+
+    & p{
+      text-align: left;
+      height: 100%;
+      padding: 5%;
+      color: rgb(255, 255, 255);
+
+    }
+
+    & div#more{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.7rem;
+      height: 100%;
+      min-width: 30%;
+      background-color: rgb(103, 71, 206);
+      margin-right: 0;
+    }
+  }
+
+
+  @media only screen and (min-width: 1024px) {
+    grid-template: 1.5fr 2.5fr 3.7fr / 1fr;
     margin: 0;
+
+    & div#places{
+    background-position: center;
+
+      grid-column: 1 / 3;
+      grid-row: 2 ;
+  }
+
+    & div#other{
+      grid-column: 1 / 3;
+      grid-row: 3 ;
+      
+  }
   }
 
   @media only screen and (min-width: 768px) {

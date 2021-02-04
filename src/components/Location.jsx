@@ -25,8 +25,8 @@ class Location extends React.Component {
     try {
       const res = await fetch(URL_API);
       var par = await res.json();
-      console.log(par);
-      console.log(par.main.temp);
+      // console.log(par);
+      // console.log(par.main.temp);
 
       this.setState({
         loading: false,

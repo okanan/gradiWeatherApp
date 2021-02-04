@@ -4,37 +4,88 @@
   justify-content: space-around;
   min-height: 200px;
   height: 100%;
-}
 
-.favoriteCard{
-  border-radius: 20px;
-  width: 90%;
-  margin: 0 auto;
-  height: 100px;
+  & .favoriteCard{
+    border-radius: 20px;
+    width: 90%;
+    margin: 0 auto;
+    height: 100px;
+  }
+  
+  & .favoriteCard#paris{  
+    -webkit-box-shadow: 0px 0px 71px -42px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 71px -42px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 55px -23px rgba(0,0,0,0.75);
+    display: grid;
+    grid-template: 3fr 0.9fr / 1.2fr 3fr;
+    height: 35%;
+    background-color: white;
+    background-size: contain;
+    font-size: 0.5rem;
+    font-family: 'Questrial', sans-serif;
 
-}
+    & div#iconWeather{
+      background-color: rgb(215, 218, 252);
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 15px;
+      height: 90%;
+      width: 100%;
 
-.favoriteCard#paris{
+    }
 
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-image: url('../../static/paris.jpg');
-  background-size: contain;
-  font-size: 0.7rem;
-}
+    & div#cityWeather{
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 0.7rem;
 
-.cardBg{
-  background: linear-gradient(90deg, rgba(5,4,24,0.8500350823923319) 0%, rgba(0,0,0,0.799614914325105) 19%, rgba(242,242,242,0) 100%);
-  color: whitesmoke;
-  padding: 4%;
-  height: 100%;
-  border-radius: 20px;
-  font-family: 'Questrial', sans-serif;
-}
+    }
 
-.favoriteCard#addFavorite{
-  background-color: cadetblue;
+    & div#cityHumedity{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      color: rgb(168, 168, 168);
+      grid-column: 1 / 5;
+      font-size: 0.55rem;
 
-}
+    }
+  }
+  
+  & .favoriteCard#addFavorite{
+    background-image: url('../../static/locationBg.svg');
+    background-position: bottom;
+    background-size: 20vh;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    border: 2px dashed rgb(184, 184, 184);
+    height: 50%;
+  }
+  
+  #addFavorite button{
+    background-color: rgb(185, 173, 228);
+    border: 0;
+    border-radius: 15px;
+    height: 30px;
+    width: 120px;
+    margin: 5% auto;
+    color: black;
+    font-weight: 300;
+  }
+
+  #addFavorite button:hover{
+    background-color: rgb(117, 117, 117);
+    color: white;
+
+  }
+  
+  @media only screen and (min-width: 1024px) {
+  }
+  
+  @media only screen and (min-width: 768px) {
+  }
+};
+
+

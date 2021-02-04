@@ -13,7 +13,7 @@ body{
 
 .App {
   display: grid;
-  grid-template: repeat(7, auto) / 1fr;
+  grid-template: 35vh 0.1fr 0.4fr 0.1fr 0.7fr 1fr 1.3fr / 1fr;
   text-align: center;
   height: auto;
 
@@ -21,9 +21,9 @@ body{
     // font-weight: 600;
     margin:  5%  auto;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: 'Questrial', sans-serif;
-    color: rgb(122, 122, 122);
+    color: rgb(97, 97, 97);
   }
 }
 

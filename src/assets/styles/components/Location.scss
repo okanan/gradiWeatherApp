@@ -3,8 +3,7 @@
   background-image: url('../../static/locationbg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 35vh;
-  height: auto;
+  height: 100%;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   color: whitesmoke;
@@ -15,15 +14,17 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 5%;
+    border-bottom-left-radius: 50px;
 
     height: 100%;
-    width: 50%;
-    font-size: 1.8rem;
+    width: 70%;
+    font-size: 1.6rem;
     font-family: 'Questrial', sans-serif;
   }
 
-  @media only screen and (min-width: 1200px){
+  @media only screen and (min-width: 1024px){
     border-radius: 30px;
     margin: 0% 0%;
     background-position: center;

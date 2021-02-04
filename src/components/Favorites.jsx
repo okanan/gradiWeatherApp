@@ -25,15 +25,15 @@ export default class Favorites extends Component {
     try {
       const res = await fetch(URL_API);
       var par = await res.json();
-      console.log(par);
-      console.log(par.main.temp);
+
+      // console.log(par.weather[0]['description']);
 
       this.setState({
         loading: false,
         data: par,
       })
       // return par;
-      
+
     } catch (error) {
       this.setState({
         error: error,
@@ -45,6 +45,11 @@ export default class Favorites extends Component {
   render() {
 
     const info = {...this.state.data.main};
+    const wind = {...this.state.data.wind};
+    const weather = {...this.state.data.weather};
+    // const weatherObject = Object.assign({}, weather);
+    const weatherObject = {...weather[0]};
+    // console.log(weatherObject);
 
     if(this.state.loading === true && !this.state.data){
       return 0;
@@ -57,9 +62,17 @@ export default class Favorites extends Component {
     return (
       <div className="favoritesContainer">
         <div className="favoriteCard" id="paris">
-          <div className="cardBg">
-            <h1>{this.state.data.name}</h1>
-            <h2>{info.temp}°</h2>
+          <div id="iconWeather">
+            ps
+          </div>
+          <div id="cityWeather">
+            <h1>{info.temp}°</h1>
+            <h3>{this.state.data.name}</h3>
+          </div>
+          <div id="cityHumedity">
+            <p>Humidity {info.humidity}%</p>
+            <p>{weatherObject.description}</p>
+            <p>{wind.speed}km/h</p>
           </div>
         </div>
         <div className="favoriteCard" id="addFavorite">
