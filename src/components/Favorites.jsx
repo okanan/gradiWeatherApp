@@ -63,7 +63,7 @@ export default class Favorites extends Component {
       <div className="favoritesContainer">
         <div className="favoriteCard" id="paris">
           <div id="iconWeather">
-            ps
+            
           </div>
           <div id="cityWeather">
             <h1>{info.temp}°</h1>
