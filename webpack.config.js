@@ -5,7 +5,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: [
+    "core-js/modules/es.promise",
+    "core-js/modules/es.array.iterator",
+    './src/index.js',
+  ], 
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
@@ -61,6 +65,12 @@ module.exports = {
         ],
       },
     ],
+  },
+  devtool: 'inline-source-map',
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   },
   plugins:[
     new HtmlWebpackPlugin({
